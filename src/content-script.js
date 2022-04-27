@@ -1,13 +1,14 @@
-const ids = [
-  "incontent_player",
-  "top_boxad",
-  "incontent_boxad_1",
-  "incontent_boxad_1-bottom"
+const selectors = [
+  "#incontent_player",
+  "#top_boxad",
+  "#incontent_boxad_1",
+  ".top-ads-container",
+  ".bottom-ads-container",
 ]
 
 function remove() {
-  ids
-    .map(id => document.getElementById(id))
+  selectors
+    .map(selector => document.querySelector(selector))
     .forEach(element => {
       if (element) {
         element.remove()
